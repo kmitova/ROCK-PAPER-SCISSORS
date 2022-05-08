@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+:root, html {
+  font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: peru;
+}
+
+header {
+  text-align: center;
+  background-color: bisque;
+  padding: 3em;
+}
+
+.description {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.buttons, .play-again {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+button {
+  cursor: pointer;
+  font-size: 8rem;
+  padding: .1em;
+  padding-bottom: 0;
+  padding-top: 0;
+  border-radius: 10%;
+  border: none;
+  
+}
+
+.result-title {
+  text-align: center;
+}
+
+.scores {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.player-score, .computer-score {
+  /* border: 5px solid white; */
+  text-align: center;
+
+}
+
+.player-score p,
+.computer-score p {
+  font-size: 1.2rem;
+}
+
+#computer-points, #player-points {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 0
+}
+
+#play-again {
+  font-size: 3rem;
+  padding: .3em;
+  border-radius: 15px;
+  font-family: 'Playfair Display',
+  serif;
+  font-weight: bold;
+  margin-bottom: 1em;
+}

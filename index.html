@@ -13,23 +13,31 @@
     <h2>Choose your weapon wisely</h2>
   </header>
   <main>
-    <p>You will play against the computer, which will choose rock, paper or scissors randomly. add more</p>
-    <p>first to win 5 games wins</p>
-    <button class="selection" id="rock">✊</button>
+    <p class="description">You will play against the computer, which will choose rock, paper, or scissors randomly.</p>
+    <p class="description">First to get 5 points wins the game!</p>
+    <p class="description">Click on your selected weapon to play!</p>
+    <div class="buttons">
+      <button class="selection" id="rock">✊</button>
     <button class="selection" id="paper">🖐</button>
     <button class="selection" id="scissors">✌️</button>
-    <h1>Result: <span id="round-result"></span></h1>
+    </div>
+    
+    <h1 class="result-title">Result: <span id="round-result"></span></h1>
     <!-- SCORES SECTION -->
-    <div class="player-score">
-      <h2>Player choice: <span id="player-choice"></span> </h2>
-      <p>player score</p>
+  <div class="scores">
+
+      <div class="player-score">
+      <h2>Your choice: <span id="player-choice"></span> </h2>
+      <p>Your score:</p>
       <p id="player-points">0</p>
     </div>
     <div class="computer-score">
       <h2>Computer choice: <span id="computer-choice"></span> </h2>
-      <p>computer score</p>
+      <p>Computer score:</p>
       <p id="computer-points">0</p>
-    </div>
+    </div> 
+  </div>
+    
 
     <div class="play-again">
       <button id="play-again">
