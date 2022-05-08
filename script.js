@@ -1,4 +1,4 @@
-// GRABBING VARIABLES
+// GRABBING VARIABLES from DOM
 
 const computerChoiceDisplay = document.getElementById("computer-choice");
 const playerChoiceDisplay = document.getElementById("player-choice");
@@ -6,6 +6,9 @@ const resultDisplay = document.getElementById("round-result");
 const possibleSelections = document.querySelectorAll('.selection')
 const playerPoints = document.getElementById('player-points')
 const computerPoints = document.getElementById("computer-points");
+const playAgainBtn = document.getElementById('play-again')
+
+// OTHER VARIABLES
 let playerChoice
 let computerChoice
 let resultRound
@@ -25,6 +28,9 @@ possibleSelections.forEach(possibleSelection => possibleSelection.addEventListen
   currentScoreCalc()
   } 
 }))
+
+//play again, refreshes page and resets score
+playAgainBtn.addEventListener('click', () => location.reload())
 
 // computer chooses
 function computerPlay() {
@@ -91,6 +97,3 @@ function currentScoreCalc() {
     
   }
 }
-
-
-  
