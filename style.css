@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root, html {
   font-family: 'Playfair Display', serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: peru;
+  background-color: #a2d6f9;
 }
 
 header {
   text-align: center;
-  background-color: bisque;
+  background-color: #ffc600;
   padding: 3em;
 }
 
 header h1 {
   font-size: 3rem;
+  background-color: white;
+  padding: 0.5em;
 }
 
 main {
-  background-color: azure;
+  background-color: #ffdd32;
   width: 80vw;
   margin: 2em auto;
 }
@@ -52,7 +56,7 @@ button {
   padding-top: 0;
   border-radius: 10%;
   border: none;
-  
+  background-color: white;
 }
 
 .result-title {
@@ -65,10 +69,20 @@ button {
   justify-content: space-evenly;
 }
 
+#player-choice, #computer-choice {
+  text-transform: capitalize;
+}
+
 .player-score, .computer-score {
   /* border: 5px solid white; */
   text-align: center;
-
+  background-color: #a2d6f9;
+  padding: 0 1em 0 .5em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  width: 30%;
+  border-radius: 10%;
+  
 }
 
 .player-score p,
@@ -79,7 +93,7 @@ button {
 #computer-points, #player-points {
   font-size: 3rem;
   font-weight: bold;
-  margin-top: 0
+  margin-top: 0;
 }
 
 #play-again {
@@ -90,4 +104,6 @@ button {
   serif;
   font-weight: bold;
   margin-bottom: 1em;
+  color: white;
+  background-color: #00296b;
 }
