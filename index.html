@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <header>
-    <h1>WELCOME TO THIS GAME OF ROCK, PAPER, SCISSORS</h1>
-  </header>
-  <main>
-    <div class="descriptions-all">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>WELCOME TO THIS GAME OF ROCK, PAPER, SCISSORS</h1>
+    </header>
+    <main>
+      <div class="descriptions-all">
+        <p class="description">
+          You will play against the computer, which will choose rock, paper, or
+          scissors randomly.
+        </p>
+        <p class="description">First to get 5 points wins the game!</p>
+        <p class="description italic">Click on your selected weapon to play!</p>
+      </div>
 
-      <p class="description">You will play against the computer, which will choose rock, paper, or scissors randomly.</p>
-    <p class="description">First to get 5 points wins the game!</p>
-    <p class="description italic" >Click on your selected weapon to play!</p>
-    </div>
-    
-    <div class="buttons">
-      <button class="selection" id="rock">✊</button>
-    <button class="selection" id="paper">🖐</button>
-    <button class="selection" id="scissors">✌️</button>
-    </div>
-    
-    <h1 class="result-title"><span id="round-result"></span></h1>
-    <!-- SCORES SECTION -->
-  <div class="scores">
+      <div class="buttons">
+        <button class="selection" id="rock">✊</button>
+        <button class="selection" id="paper">🖐</button>
+        <button class="selection" id="scissors">✌️</button>
+      </div>
 
-      <div class="player-score">
-      <h2>Your choice: <span id="player-choice"></span> </h2>
-      <p>Your score:</p>
-      <p id="player-points">0</p>
-    </div>
-    <div class="computer-score">
-      <h2>Computer's choice: <span id="computer-choice"></span> </h2>
-      <p>Computer's score:</p>
-      <p id="computer-points">0</p>
-    </div> 
-  </div>
-    
+      <h1 class="result-title"><span id="round-result"></span></h1>
+      <!-- SCORES SECTION -->
+      <div class="scores">
+        <div class="player-score">
+          <h2>Your choice: <span id="player-choice"></span></h2>
+          <p>Your score:</p>
+          <p id="player-points">0</p>
+        </div>
+        <div class="computer-score">
+          <h2>Computer's choice: <span id="computer-choice"></span></h2>
+          <p>Computer's score:</p>
+          <p id="computer-points">0</p>
+        </div>
+      </div>
 
-    <div class="play-again">
-      <button id="play-again">
-        Play again
-      </button>
-    </div>
-  </main>
+      <div class="play-again">
+        <button id="play-again">Play again</button>
+      </div>
+    </main>
 
-  <!-- <script src="./script.js"></script> -->
-  <script src="./script.js"></script>
-</body>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./script.js"></script>
+  </body>
 </html>
