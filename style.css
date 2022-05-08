@@ -58,6 +58,10 @@ button {
   background-color: white;
 }
 
+button:hover {
+  transform: scale(1.2);
+}
+
 .result-title {
   text-align: center;
 }
