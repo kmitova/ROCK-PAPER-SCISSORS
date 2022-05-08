@@ -1,62 +1,53 @@
+// GRABBING VARIABLES
+
+const computerChoiceDisplay = document.getElementById("computer-choice");
+const playerChoiceDisplay = document.getElementById("player-choice");
+const resultDisplay = document.getElementById("round-result");
+const possibleSelections = document.querySelectorAll('.selection')
+let playerChoice
+let computerChoice
+let resultRound
+
+// EVENTS
+possibleSelections.forEach(possibleSelection => possibleSelection.addEventListener('click', (e) => {
+  playerChoice = e.target.id 
+  // console.log(playerChoice)
+  playerChoiceDisplay.textContent = playerChoice
+  computerPlay()
+  playRound()
+}))
+
+// computer chooses
 function computerPlay() {
   let choices = ["rock", "paper", "scissors"];
   let randomIndex = Math.floor(Math.random() * choices.length);
-  let item = choices[randomIndex];
-  return item;
+  computerChoice = choices[randomIndex];
+  computerChoiceDisplay.textContent = computerChoice
 }
 
-function playerPlay() {
-  let playerHand = prompt("Choose rock, paper or scissors:");
-  playerHand = playerHand.toLowerCase();
-  // console.log(playerChoice);
-  return playerHand;
-}
-
-let compChoice = "";
-let playerChoice = "";
-
-function playRound(playerChoice, compChoice) {
-  let resultRound = "";
-  // compChoice = computerPlay();
-  // playerChoice = playerPlay()
-  // console.log(compChoice);
-  // console.log(playerChoice)
-  if (playerChoice === "rock" && compChoice === "rock") {
+// plays a round
+function playRound() {
+  console.log(playerChoice)
+  console.log(computerChoice)
+  if (playerChoice === "rock" && computerChoice === "rock") {
     resultRound = "It's a tie";
-  } else if (playerChoice === "paper" && compChoice === "paper") {
+  } else if (playerChoice === "paper" && computerChoice === "paper") {
     resultRound = "It's a tie";
-  } else if (playerChoice === "scissors" && compChoice === "scissors") {
+  } else if (playerChoice === "scissors" && computerChoice === "scissors") {
     resultRound = "It's a tie";
-  } else if (playerChoice === "rock" && compChoice === "paper") {
+  } else if (playerChoice === "rock" && computerChoice === "paper") {
     resultRound = "You lose, paper beats rock!";
-  } else if (playerChoice === "rock" && compChoice === "scissors") {
+  } else if (playerChoice === "rock" && computerChoice === "scissors") {
     resultRound = "You win, rocks beats paper!";
-  } else if (playerChoice === "paper" && compChoice === "rock") {
+  } else if (playerChoice === "paper" && computerChoice === "rock") {
     resultRound = "You win, paper beats rock!";
-  } else if (playerChoice === "paper" && compChoice === "scissors") {
+  } else if (playerChoice === "paper" && computerChoice === "scissors") {
     resultRound = "You lose! Scissors beat paper!";
-  } else if (playerChoice === "scissors" && compChoice === "paper") {
+  } else if (playerChoice === "scissors" && computerChoice === "paper") {
     resultRound = "You win! Scissors beat paper!";
-  } else if (playerChoice === "scissors" && compChoice === "rock") {
+  } else if (playerChoice === "scissors" && computerChoice === "rock") {
     resultRound = "You lose! Rock beats scissors!";
-  } else {
-    resultRound = "Please enter a valid item.";
   }
-  return resultRound;
+resultDisplay.textContent = resultRound
+  
 }
-
-// console.log(playRound(playerChoice, compChoice))
-
-function game() {
-  // for (let i = 0; i < 5; i++) {
-  //   playerChoice = playerPlay();
-  //   compChoice = computerPlay();
-
-  //   // can use console.log to print result on console instead of alert as well, but result becomes visible after the last input from user
-  //   alert(playRound(playerChoice, compChoice));
-  // }
-  // playerChoice = playerPlay()
-  // compChoice = computerPlay()
-  // alert(playRound(playerChoice, compChoice));
-}
-game();
