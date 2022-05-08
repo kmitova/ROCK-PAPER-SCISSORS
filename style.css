@@ -14,9 +14,28 @@ header {
   padding: 3em;
 }
 
+header h1 {
+  font-size: 3rem;
+}
+
+main {
+  background-color: azure;
+  width: 80vw;
+  margin: 2em auto;
+}
+
+.descriptions-all {
+  padding: 2em;
+}
+
 .description {
   font-size: 1.5rem;
   text-align: center;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: bold;
 }
 
 .buttons, .play-again {
@@ -27,7 +46,7 @@ header {
 
 button {
   cursor: pointer;
-  font-size: 8rem;
+  font-size: 7rem;
   padding: .1em;
   padding-bottom: 0;
   padding-top: 0;
