@@ -13,15 +13,17 @@ let countFivePlayer = 0
 let countFiveComputer = 0
 let playerWinsRound = false
 let computerWinsRound = false
+let thereIsWinner = false
 
 // EVENTS
 possibleSelections.forEach(possibleSelection => possibleSelection.addEventListener('click', (e) => {
   playerChoice = e.target.id 
-  // console.log(playerChoice)
+  if (!thereIsWinner) {
   playerChoiceDisplay.textContent = playerChoice
   computerPlay()
   playRound()
   currentScoreCalc()
+  } 
 }))
 
 // computer chooses
@@ -67,7 +69,8 @@ resultDisplay.textContent = resultRound
 }
 
 function currentScoreCalc() {
-  if (computerWinsRound) {
+  // while (!thereIsWinner) {
+    if (computerWinsRound) {
     countFiveComputer += 1
     computerPoints.textContent = countFiveComputer
     computerWinsRound = false
@@ -77,4 +80,17 @@ function currentScoreCalc() {
     playerPoints.textContent = countFivePlayer
     playerWinsRound = false
   }
+
+  if (countFiveComputer === 5 || countFivePlayer === 5) {
+    thereIsWinner = true
+    if (countFiveComputer === 5) {
+      resultDisplay.textContent = "The computer wins the game!"
+    } else {
+      resultDisplay.textContent = "You win the game!";
+    }
+    
+  }
 }
+
+
+  
